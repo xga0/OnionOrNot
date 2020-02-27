@@ -91,3 +91,10 @@ plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
+
+#SHOW ACCURACY AND CONFUSION MATRIX
+y_pred = model.predict(X_test)
+y_pred = y_pred > 0.5
+
+accuracy_score(y_pred, y_test)
+confusion_matrix(y_pred, y_test)
